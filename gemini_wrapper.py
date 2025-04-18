@@ -45,10 +45,12 @@ class GeminieWrapper:
             model="gemini-2.0-flash", contents=contents
         )
         op = response.text
-        print(op[1:-2])
+        query = op[1:-2]
+        print(query, op)
 
         query_object = eval(op)
         print(query_object)
+        return query
 
 
 if __name__ == "__main__":
